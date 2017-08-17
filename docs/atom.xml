@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><feed xmlns="http://www.w3.org/2005/Atom">
   <title>燃烧的青春</title>
   <id>http://www.uutan.net</id>
-  <updated>2017-08-18T00:00:40+08:00</updated>
+  <updated>2017-08-18T00:10:31+08:00</updated>
   <subtitle>构想，行动</subtitle>
   <link href="http://www.uutan.net"></link>
   <author>
@@ -25,8 +25,11 @@
     <title>安静的夜真好</title>
     <updated>2016-10-08T04:31:53+08:00</updated>
     <id>tag:www.uutan.net,2016-10-08:/安静的夜真好.html</id>
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;安静的夜真好，我一直没有时间去欣赏夜的美。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;今天起得早，在阳台上欣赏夜景，马路干净车辆少。高楼马路灯光显得格外热闹。秋风萧萧，树枝叶摆。心里感觉安静的夜真好。&lt;/p&gt;&#xA;&#xA;&lt;p&gt;其实夜从来都不安静，而是心静夜就静。我喜欢这么安静的环境，无人打扰。思路也不会受到干扰。断舍离的理念，我执行的不是很好，但已抑制了自己很多欲望。给自己鼓励一下，非常不错。再将自己的力量集中使用，不再让其它不相干的事受到牵扯。做到排除杂念，心有所归，心无旁鹜。&lt;/p&gt;&#xA;</content>
     <link href="http://www.uutan.net/安静的夜真好.html"></link>
+    <author>
+      <name>UUTAN</name>
+    </author>
   </entry>
   <entry>
     <title>明天开始上班，今天还在还技术债务</title>
@@ -48,6 +51,9 @@
     <id>tag:www.uutan.net,2016-10-06:/采用react-native-开发app应用.html</id>
     <content type="html"></content>
     <link href="http://www.uutan.net/采用react-native-开发app应用.html"></link>
+    <author>
+      <name>UUTAN</name>
+    </author>
   </entry>
   <entry>
     <title>节后报到正式开工</title>
@@ -76,5 +82,8 @@
     <id>tag:www.uutan.net,2016-01-12:/第三方支付在p2p平台的操作流程.html</id>
     <content type="html"></content>
     <link href="http://www.uutan.net/第三方支付在p2p平台的操作流程.html"></link>
+    <author>
+      <name>UUTAN</name>
+    </author>
   </entry>
 </feed>

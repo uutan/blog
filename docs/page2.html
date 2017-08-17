@@ -13,25 +13,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="燃烧的青春">
 <meta name="twitter:description" content="构想，行动">
-<meta name="twitter:image:src" content="http://www.uutan.net/blog/images/avatar.png">
+<meta name="twitter:image:src" content="http://www.uutan.net/images/avatar.png">
 
 <meta property="og:url" content="http://www.uutan.net">
 <meta property="og:title" content="燃烧的青春">
 <meta property="og:description" content="构想，行动">
 <meta property="og:site_name" content="燃烧的青春">
-<meta property="og:image" content="http://www.uutan.net/blog/images/avatar.png">
+<meta property="og:image" content="http://www.uutan.net/images/avatar.png">
 <meta property="og:type" content="website">
 <meta name="robots" content="noodp">
 
 <meta itemprop="name" content="燃烧的青春">
 <meta itemprop="description" content="构想，行动">
-<meta itemprop="image" content="http://www.uutan.net/blog/images/avatar.png">
+<meta itemprop="image" content="http://www.uutan.net/images/avatar.png">
 
 <link rel="canonical" href="http://www.uutan.net">
 
-<link rel="shortcut icon" href="/blog/favicon.png">
-<link rel="apple-itouch-icon" href="/blog/favicon.png">
-<link rel="stylesheet" href="/blog/bundle/index.css">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -41,7 +41,29 @@
         minute: '分钟前',
         second: '秒前'
     };
-    var root = '\/blog';
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
 </script>
 
 
@@ -52,25 +74,25 @@
     <body>
         <article class="container">
             <header class="header-wrap">
-  <a class="index" href="/blog/">
-    <img class="logo" src="/blog/images/avatar.png" />
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
     燃烧的青春
   </a>
   <ul class="menu">
-      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
-      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
-      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
   </ul>
 </header>
 
             <article class="main page">
                 <header class="header site">
                     
-                        <img class="logo" src="/blog/images/avatar.png" />
+                        <img class="logo" src="/images/avatar.png" />
                         <h1 class="title">燃烧的青春</h1>
                         <h2 class="subtitle">构想，行动</h2>
                         <div class="search-wrap">
-  <input id="search" class="search" placeholder="搜索..." data-root="/blog">
+  <input id="search" class="search" placeholder="搜索..." data-root="">
   <svg class="icon" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg>
 </div>
 
@@ -79,7 +101,7 @@
                 <ul class="article-list">
                     
                     <li class="article">
-                        <a class="title" href="/blog/%e4%bd%bf%e7%94%a8restful%e6%96%b9%e5%bc%8f%e5%bc%80%e5%8f%91%e6%89%8b%e5%a4%b4%e7%8e%b0%e6%9c%89%e5%b7%a5%e4%bd%9c%e7%9a%84%e5%b7%a5%e5%85%b7%e9%80%89%e6%8b%a9.html">使用RESTful方式开发手头现有工作的工具选择</a>
+                        <a class="title" href="/%e4%bd%bf%e7%94%a8restful%e6%96%b9%e5%bc%8f%e5%bc%80%e5%8f%91%e6%89%8b%e5%a4%b4%e7%8e%b0%e6%9c%89%e5%b7%a5%e4%bd%9c%e7%9a%84%e5%b7%a5%e5%85%b7%e9%80%89%e6%8b%a9.html">使用RESTful方式开发手头现有工作的工具选择</a>
                         
                         
                         <section class="info">
@@ -89,13 +111,13 @@
                             <span class="date" data-time="1452479087"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/blog/tag/RESTful/index.html">RESTful</a><a class="tag" href="/blog/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/blog/tag/%e6%a1%86%e6%9e%b6/index.html">框架</a>
+                            <a class="tag" href="/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/tag/RESTful/index.html">RESTful</a><a class="tag" href="/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/tag/%e6%a1%86%e6%9e%b6/index.html">框架</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/b2b2c%e5%95%86%e5%9f%8e%e7%9a%84%e5%88%86%e6%9e%90.html">b2b2c商城的分析</a>
+                        <a class="title" href="/b2b2c%e5%95%86%e5%9f%8e%e7%9a%84%e5%88%86%e6%9e%90.html">b2b2c商城的分析</a>
                         
                         
                         <section class="info">
@@ -105,13 +127,13 @@
                             <span class="date" data-time="1452207959"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/%e9%9a%8f%e7%ac%94/index.html">随笔</a><a class="tag" href="/blog/tag/%e5%95%86%e5%9f%8e/index.html">商城</a><a class="tag" href="/blog/tag/shopnc/index.html">shopnc</a>
+                            <a class="tag" href="/tag/%e9%9a%8f%e7%ac%94/index.html">随笔</a><a class="tag" href="/tag/%e5%95%86%e5%9f%8e/index.html">商城</a><a class="tag" href="/tag/shopnc/index.html">shopnc</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/web%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90.html">web开发工具推荐</a>
+                        <a class="title" href="/web%e5%bc%80%e5%8f%91%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90.html">web开发工具推荐</a>
                         
                         
                         <section class="info">
@@ -121,13 +143,13 @@
                             <span class="date" data-time="1452142234"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/blog/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a>
+                            <a class="tag" href="/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/%e5%85%b3%e4%ba%8e%e5%88%b8%e7%9a%84%e9%82%a3%e4%ba%9b%e4%ba%8b.html">关于券的那些事</a>
+                        <a class="title" href="/%e5%85%b3%e4%ba%8e%e5%88%b8%e7%9a%84%e9%82%a3%e4%ba%9b%e4%ba%8b.html">关于券的那些事</a>
                         
                         
                         <section class="info">
@@ -137,13 +159,13 @@
                             <span class="date" data-time="1452012556"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/idea/index.html">idea</a><a class="tag" href="/blog/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a>
+                            <a class="tag" href="/tag/idea/index.html">idea</a><a class="tag" href="/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/%e5%a4%9a%e5%aa%92%e4%bd%93%e5%88%86%e4%ba%ab%e5%b9%b3%e5%8f%b0%e6%9e%84%e6%9e%b6.html">多媒体分享平台构架</a>
+                        <a class="title" href="/%e5%a4%9a%e5%aa%92%e4%bd%93%e5%88%86%e4%ba%ab%e5%b9%b3%e5%8f%b0%e6%9e%84%e6%9e%b6.html">多媒体分享平台构架</a>
                         
                         
                         <section class="info">
@@ -153,13 +175,13 @@
                             <span class="date" data-time="1451872416"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/blog/tag/idea/index.html">idea</a>
+                            <a class="tag" href="/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/tag/idea/index.html">idea</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/git%e7%ad%be%e9%a1%b9%e7%9b%ae%e5%88%b0%e4%b8%80%e4%b8%aa%e9%9d%9e%e7%a9%ba%e7%9a%84%e7%9b%ae%e5%bd%95%e4%b8%ad.html">git签项目到一个非空的目录中</a>
+                        <a class="title" href="/git%e7%ad%be%e9%a1%b9%e7%9b%ae%e5%88%b0%e4%b8%80%e4%b8%aa%e9%9d%9e%e7%a9%ba%e7%9a%84%e7%9b%ae%e5%bd%95%e4%b8%ad.html">git签项目到一个非空的目录中</a>
                         
                         
                         <section class="info">
@@ -175,39 +197,40 @@
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/2016.html">2016年规划</a>
+                        <a class="title" href="/2016.html">2016年规划</a>
                         
                         
                         <section class="info">
-                            
-                            
+                            <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                            <a class="name" href="/about.me.html">UUTAN</a>
                             
                             <span class="date" data-time="1451836932"><span class="from"></span></span>
                             
                             <span class="tags">
-                            
+                            <a class="tag" href="/tag/%e9%9a%8f%e7%ac%94/index.html">随笔</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/2015%e5%b9%b4%e6%80%bb%e7%bb%93.html">2015年总结</a>
+                        <a class="title" href="/2015year.html">2015年总结</a>
                         
-                        
+                        <section class="preview content"><p>2014年10月中旬，经王兄介绍，推荐接了一个叫聚X贷的技术外包活，负责平台开发，APP开发，和安全维护。从此就踏入了金融借贷这个行业。虽然只负责技术，但也需要从头到尾把金融相关的知识恶补一下，花了半个月时间，将不懂的知识进行了一个汇总，做了满满的几篇笔记。2015年就在金融行业中奋斗了一整年。步入2016年，需要将2015年做一个总结，总结自己的收获与成长。毫无疑问，2014年5月离职后，是包成长最快的一段时间。</p>
+</section>
                         <section class="info">
-                            
-                            
+                            <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                            <a class="name" href="/about.me.html">UUTAN</a>
                             
                             <span class="date" data-time="1451836921"><span class="from"></span></span>
                             
                             <span class="tags">
-                            
+                            <a class="tag" href="/tag/%e9%9a%8f%e7%ac%94/index.html">随笔</a>
                             </span>
                         </section>
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/hello-world.html">神经病医生</a>
+                        <a class="title" href="/hello-world.html">神经病医生</a>
                         
                         
                         <section class="info">
@@ -223,27 +246,27 @@
                     </li>
                     
                     <li class="article">
-                        <a class="title" href="/blog/ink-blog-tool.html">简洁的静态博客构建工具 —— 纸小墨（InkPaper）</a>
-                        <div class="cover" style="background-image:url(/blog/images/example.png);"></div>
+                        <a class="title" href="/ink-blog-tool.html">简洁的静态博客构建工具 —— 纸小墨（InkPaper）</a>
+                        <div class="cover" style="background-image:url(/images/example.png);"></div>
                         <section class="preview content"><p>纸小墨（InkPaper）是一个GO语言编写的开源静态博客构建工具，可以快速搭建博客网站。它无依赖跨平台，配置简单构建快速，注重简洁易用与更优雅的排版。</p>
 </section>
                         <section class="info">
-                            <span class="avatar" style="background-image: url(/blog/images/avatar.png);"></span>
-                            <a class="name" href="/blog/about.me.html">UUTAN</a>
+                            <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                            <a class="name" href="/about.me.html">UUTAN</a>
                             
                             <span class="date" data-time="1468227600"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/blog/tag/%e8%ae%be%e8%ae%a1/index.html">设计</a><a class="tag" href="/blog/tag/%e5%86%99%e4%bd%9c/index.html">写作</a>
+                            <a class="tag" href="/tag/%e8%ae%be%e8%ae%a1/index.html">设计</a><a class="tag" href="/tag/%e5%86%99%e4%bd%9c/index.html">写作</a>
                             </span>
                         </section>
                     </li>
                     
                 </ul>
                 <section class="page-nav">
-                    <a class="prev" href="/blog/index.html">上一页</a>
+                    <a class="prev" href="/index.html">上一页</a>
                     <span class="nav">2 / 3</span>
-                    <a class="next" href="/blog/page3.html">下一页</a>
+                    <a class="next" href="/page3.html">下一页</a>
                 </section>
             </article>
         </article>
@@ -258,5 +281,5 @@
 </footer>
 
     </body>
-    <script src="/blog/bundle/index.js"></script>
+    <script src="/bundle/index.js"></script>
 </html>

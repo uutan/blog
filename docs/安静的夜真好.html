@@ -13,25 +13,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="燃烧的青春">
 <meta name="twitter:description" content="构想，行动">
-<meta name="twitter:image:src" content="http://www.uutan.net/blog/images/avatar.png">
+<meta name="twitter:image:src" content="http://www.uutan.net/images/avatar.png">
 
 <meta property="og:url" content="http://www.uutan.net">
 <meta property="og:title" content="燃烧的青春">
 <meta property="og:description" content="构想，行动">
 <meta property="og:site_name" content="燃烧的青春">
-<meta property="og:image" content="http://www.uutan.net/blog/images/avatar.png">
+<meta property="og:image" content="http://www.uutan.net/images/avatar.png">
 <meta property="og:type" content="website">
 <meta name="robots" content="noodp">
 
 <meta itemprop="name" content="燃烧的青春">
 <meta itemprop="description" content="构想，行动">
-<meta itemprop="image" content="http://www.uutan.net/blog/images/avatar.png">
+<meta itemprop="image" content="http://www.uutan.net/images/avatar.png">
 
 <link rel="canonical" href="http://www.uutan.net">
 
-<link rel="shortcut icon" href="/blog/favicon.png">
-<link rel="apple-itouch-icon" href="/blog/favicon.png">
-<link rel="stylesheet" href="/blog/bundle/index.css">
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-itouch-icon" href="/favicon.png">
+<link rel="stylesheet" href="/bundle/index.css">
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -41,38 +41,60 @@
         minute: '分钟前',
         second: '秒前'
     };
-    var root = '\/blog';
+    var root = '';
+</script>
+
+<script type="text/javascript">
+    var conn, reloadTimer, connectTimer;
+    var connect = function() {
+        conn = new WebSocket('ws://' + location.host + '/live');
+        conn.onmessage = function(event) {
+            if (event.data === 'change') {
+                if (reloadTimer) clearTimeout(reloadTimer);
+                reloadTimer = setTimeout(function() {
+                    window.location.reload();
+                }, 200);
+            }
+        };
+        conn.onclose = function() {
+            if (connectTimer) clearTimeout(connectTimer);
+            connectTimer = setTimeout(function() {
+                connect();
+            }, 1000);
+        };
+    };
+    connect();
 </script>
 
 
         <meta name="keywords" content="安静,随意,">
         <meta name="description" content="安静的夜真好">
-        <meta name="author" content="">
+        <meta name="author" content="UUTAN">
         <title>安静的夜真好</title>
     </head>
     <body>
         <article class="container">
             <header class="header-wrap">
-  <a class="index" href="/blog/">
-    <img class="logo" src="/blog/images/avatar.png" />
+  <a class="index" href="/">
+    <img class="logo" src="/images/avatar.png" />
     燃烧的青春
   </a>
   <ul class="menu">
-      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
-      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
-      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
+      <li class="menu-item"><a href="/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
   </ul>
 </header>
 
             <article class="main article">
                 <h1 class="title">安静的夜真好</h1>
                 <section class="info">
-                    
-                    
+                    <span class="avatar" style="background-image: url(/images/avatar.png);"></span>
+                    <a class="name" href="/about.me.html">UUTAN</a>
                     
                     <span class="date" data-time="1475872313"><span class="from"></span></span>
                     
-                    <span class="tags"><a class="tag" href="/blog/tag/%e5%ae%89%e9%9d%99/index.html">安静</a><a class="tag" href="/blog/tag/%e9%9a%8f%e6%84%8f/index.html">随意</a></span>
+                    <span class="tags"><a class="tag" href="/tag/%e5%ae%89%e9%9d%99/index.html">安静</a><a class="tag" href="/tag/%e9%9a%8f%e6%84%8f/index.html">随意</a></span>
                 </section>
                 <article class="content"><p>安静的夜真好，我一直没有时间去欣赏夜的美。</p>
 
@@ -87,21 +109,21 @@
 <p>国庆七天过得真快。相信春节也不远了。珍惜时间。</p>
 </article>
                 <section class="author">
-                    
-                    <a class="name" href="/blog/about..html"></a>
-                    <div class="intro"></div>
+                    <div class="avatar" style="background-image: url(/images/avatar.png);"></div>
+                    <a class="name" href="/about.me.html">UUTAN</a>
+                    <div class="intro">神经病医生</div>
                 </section>
                 <section class="recommend">
                     
                     <section class="nav prev more">
                         <div class="head">上篇文章</div>
-                        <a class="link" href="/blog/%e7%a9%ba%e9%97%b4%e4%b8%8d%e8%b6%b3%e6%80%8e%e4%b9%88%e7%a0%b4.html">空间不足怎么破</a>
+                        <a class="link" href="/%e7%a9%ba%e9%97%b4%e4%b8%8d%e8%b6%b3%e6%80%8e%e4%b9%88%e7%a0%b4.html">空间不足怎么破</a>
                     </section>
                     
                     
                     <section class="nav next more">
                         <div class="head">下篇文章</div>
-                        <a class="link" href="/blog/%e6%98%8e%e5%a4%a9%e5%bc%80%e5%a7%8b%e4%b8%8a%e7%8f%ad%ef%bc%8c%e4%bb%8a%e5%a4%a9%e8%bf%98%e5%9c%a8%e8%bf%98%e6%8a%80%e6%9c%af%e5%80%ba%e5%8a%a1.html">明天开始上班，今天还在还技术债务</a>
+                        <a class="link" href="/%e6%98%8e%e5%a4%a9%e5%bc%80%e5%a7%8b%e4%b8%8a%e7%8f%ad%ef%bc%8c%e4%bb%8a%e5%a4%a9%e8%bf%98%e5%9c%a8%e8%bf%98%e6%8a%80%e6%9c%af%e5%80%ba%e5%8a%a1.html">明天开始上班，今天还在还技术债务</a>
                     </section>
                     
                 </section>
@@ -128,6 +150,6 @@
     <span class="publish">Powered by <a href="http://www.chole.io/" target="_blank">Ink</a></span>
 </footer>
 
-        <script src="/blog/bundle/index.js"></script>
+        <script src="/bundle/index.js"></script>
     </body>
 </html>
