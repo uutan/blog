@@ -1,5 +1,6 @@
 title: b2b2c商城的分析
 date: 2016-01-08 07:05:59
+author: me
 tags: ['随笔','商城','shopnc']
 ---
 

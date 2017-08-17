@@ -1,5 +1,6 @@
 title: HEXO常用命令
 date: 2016-10-06 00:51:07
+author: me
 tags: ['hexo','工具']
 ---
 

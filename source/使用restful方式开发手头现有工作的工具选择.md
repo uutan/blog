@@ -1,5 +1,6 @@
 title: 使用RESTful方式开发手头现有工作的工具选择
 date: 2016-01-11 10:24:47
+author: me
 tags: ['兴趣','RESTful','工具','框架']
 ---
 
@@ -7,7 +8,7 @@ tags: ['兴趣','RESTful','工具','框架']
 一种软件架构风格，设计风格而不是标准，只是提供了一组设计原则和约束条件。它主要用于客户端和服务器交互类的软件。基于这个风格设计的软件可以更简洁，更有层次，更易于实现缓存等机制。
 
 REST（英文：Representational State Transfer，简称REST）描述了一个架构样式的网络系统，比如 web 应用程序。它首次出现在 2000 年 Roy Fielding 的博士论文中，他是 HTTP 规范的主要编写者之一。在目前主流的三种Web服务交互方案中，REST相比于SOAP（Simple Object Access protocol，简单对象访问协议）以及XML-RPC更加简单明了，无论是对URL的处理还是对Payload的编码，REST都倾向于用更加简单轻量的方法设计和实现。值得注意的是REST并没有一个明确的标准，而更像是一种设计的风格。
-
+<!-- more -->
 ## 我为什么要推荐使用RESTful方式开发
 
 分析现有技术团队现有状况。

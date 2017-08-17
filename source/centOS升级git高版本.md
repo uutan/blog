@@ -1,5 +1,6 @@
 title: centOS升级git高版本
 date: 2016-10-09 14:41:59
+author: me
 tags: ['git']
 ---
 
