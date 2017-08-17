@@ -13,25 +13,25 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="燃烧的青春">
 <meta name="twitter:description" content="构想，行动">
-<meta name="twitter:image:src" content="http://www.uutan.net/images/avatar.png">
+<meta name="twitter:image:src" content="http://www.uutan.net/blog/images/avatar.png">
 
 <meta property="og:url" content="http://www.uutan.net">
 <meta property="og:title" content="燃烧的青春">
 <meta property="og:description" content="构想，行动">
 <meta property="og:site_name" content="燃烧的青春">
-<meta property="og:image" content="http://www.uutan.net/images/avatar.png">
+<meta property="og:image" content="http://www.uutan.net/blog/images/avatar.png">
 <meta property="og:type" content="website">
 <meta name="robots" content="noodp">
 
 <meta itemprop="name" content="燃烧的青春">
 <meta itemprop="description" content="构想，行动">
-<meta itemprop="image" content="http://www.uutan.net/images/avatar.png">
+<meta itemprop="image" content="http://www.uutan.net/blog/images/avatar.png">
 
 <link rel="canonical" href="http://www.uutan.net">
 
-<link rel="shortcut icon" href="/favicon.png">
-<link rel="apple-itouch-icon" href="/favicon.png">
-<link rel="stylesheet" href="/bundle/index.css">
+<link rel="shortcut icon" href="/blog/favicon.png">
+<link rel="apple-itouch-icon" href="/blog/favicon.png">
+<link rel="stylesheet" href="/blog/bundle/index.css">
 <script type="text/javascript">
     var timeSinceLang = {
         year: '年前',
@@ -41,29 +41,7 @@
         minute: '分钟前',
         second: '秒前'
     };
-    var root = '';
-</script>
-
-<script type="text/javascript">
-    var conn, reloadTimer, connectTimer;
-    var connect = function() {
-        conn = new WebSocket('ws://' + location.host + '/live');
-        conn.onmessage = function(event) {
-            if (event.data === 'change') {
-                if (reloadTimer) clearTimeout(reloadTimer);
-                reloadTimer = setTimeout(function() {
-                    window.location.reload();
-                }, 200);
-            }
-        };
-        conn.onclose = function() {
-            if (connectTimer) clearTimeout(connectTimer);
-            connectTimer = setTimeout(function() {
-                connect();
-            }, 1000);
-        };
-    };
-    connect();
+    var root = '\/blog';
 </script>
 
 
@@ -74,21 +52,21 @@
     <body>
         <article class="container">
             <header class="header-wrap">
-  <a class="index" href="/">
-    <img class="logo" src="/images/avatar.png" />
+  <a class="index" href="/blog/">
+    <img class="logo" src="/blog/images/avatar.png" />
     燃烧的青春
   </a>
   <ul class="menu">
-      <li class="menu-item"><a href="/archive.html">归档</a></li>
-      <li class="menu-item"><a href="/tag.html">标签</a></li>
-      <li class="menu-item"><a href="/atom.xml">订阅</a></li>
+      <li class="menu-item"><a href="/blog/archive.html">归档</a></li>
+      <li class="menu-item"><a href="/blog/tag.html">标签</a></li>
+      <li class="menu-item"><a href="/blog/atom.xml">订阅</a></li>
   </ul>
 </header>
 
             <article class="main page">
                 <header class="header site">
                     
-                        <img class="logo" src="/images/avatar.png" />
+                        <img class="logo" src="/blog/images/avatar.png" />
                         <h1 class="tag">框架</h1>
                         <h2 class="tag-sub">1 篇文章</h2>
                     
@@ -96,7 +74,7 @@
                 <ul class="article-list">
                     
                     <li class="article">
-                        <a class="title" href="/%e4%bd%bf%e7%94%a8restful%e6%96%b9%e5%bc%8f%e5%bc%80%e5%8f%91%e6%89%8b%e5%a4%b4%e7%8e%b0%e6%9c%89%e5%b7%a5%e4%bd%9c%e7%9a%84%e5%b7%a5%e5%85%b7%e9%80%89%e6%8b%a9.html">使用RESTful方式开发手头现有工作的工具选择</a>
+                        <a class="title" href="/blog/%e4%bd%bf%e7%94%a8restful%e6%96%b9%e5%bc%8f%e5%bc%80%e5%8f%91%e6%89%8b%e5%a4%b4%e7%8e%b0%e6%9c%89%e5%b7%a5%e4%bd%9c%e7%9a%84%e5%b7%a5%e5%85%b7%e9%80%89%e6%8b%a9.html">使用RESTful方式开发手头现有工作的工具选择</a>
                         
                         
                         <section class="info">
@@ -106,7 +84,7 @@
                             <span class="date" data-time="1452479087"><span class="from"></span></span>
                             
                             <span class="tags">
-                            <a class="tag" href="/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/tag/RESTful/index.html">RESTful</a><a class="tag" href="/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/tag/%e6%a1%86%e6%9e%b6/index.html">框架</a>
+                            <a class="tag" href="/blog/tag/%e5%85%b4%e8%b6%a3/index.html">兴趣</a><a class="tag" href="/blog/tag/RESTful/index.html">RESTful</a><a class="tag" href="/blog/tag/%e5%b7%a5%e5%85%b7/index.html">工具</a><a class="tag" href="/blog/tag/%e6%a1%86%e6%9e%b6/index.html">框架</a>
                             </span>
                         </section>
                     </li>
@@ -130,5 +108,5 @@
 </footer>
 
     </body>
-    <script src="/bundle/index.js"></script>
+    <script src="/blog/bundle/index.js"></script>
 </html>
